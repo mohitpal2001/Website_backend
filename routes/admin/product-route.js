@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-import { addProduct, fetchAllProducts, editProduct,deleteProduct } from "../../controllers/admin/product.controller";
+const { addProduct, fetchAllProducts, editProduct,deleteProduct,handleImageUpload } = require('../../controllers/admin/product.controller');
 
 const { upload } = require("../../helpers/cloudinary");
 
