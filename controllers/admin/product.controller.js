@@ -99,7 +99,7 @@ const deleteProduct = async (req, res) => {
 
 }
 
-module.exports = {
+module.exports = { 
     handleImageUpload,
     addProduct,
     fetchAllProducts,
