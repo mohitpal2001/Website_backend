@@ -35,6 +35,7 @@ res.status(500).json({
 
 const loginUser = async(req,res)=>{
     const{email,password}=req.body
+    console.log(email,password);
  try{
     const checkUser = await User.findOne({email});
     if(!checkUser){
@@ -56,8 +57,8 @@ const loginUser = async(req,res)=>{
 
    res.cookie('token', token, {
   httpOnly: true,
-  sameSite: isProduction ? 'none' : 'lax', // 'none' only in production (cross-site + HTTPS)
-  secure: isProduction, // true only if using HTTPS
+  secure: false,      
+  sameSite: "lax" 
 }).json({
             message:'Logged in succesfully',
         user:{
