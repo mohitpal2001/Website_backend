@@ -10,3 +10,5 @@ npm-debug.log
 .idea
 coverage
 *.log
+AWS_DEPLOYMENT.md
+deploy.sh
